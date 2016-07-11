@@ -1,12 +1,12 @@
 /* @flow */
 
-export type Dictionary <value> = {[key:string]: value}
-export type $dictionary <value> = (data:?{[key:string]: value}) =>
-  Dictionary<value>
+export type Dictionary <value> = {
+  [key:string]: value
+}
 
-;;;
+const blank = {}
 
-export const dictionary:$dictionary = data => {
+export const dictionary = <value> (data:Dictionary<value>=blank):Dictionary<value> => {
   const value = Object.create(null)
 
   if (data != null) {
