@@ -1,9 +1,10 @@
 [ignore]
-dist/.*
-
-[include]
 
 [libs]
 
+[include]
+
 [options]
-experimental.strict_type_args=true
+
+suppress_comment= \\(.\\|\n\\)*\\@FlowIssue
+suppress_comment= \\(.\\|\n\\)*\\@FlowIgnore

@@ -5,7 +5,7 @@ Use of JS objects as dictionaries is common but error prone problem given the ha
 This is miniature library deal with this boilerplate for you:
 
 ```js
-import dictionary from "dictionary"
+import dictionary from 'dictionary'
 
 const ages = dictionary({
   Tom: 32,
@@ -23,20 +23,20 @@ And if you happen to type check your JS code with [flow][] you can take further 
 
 ```js
 /* @flow */
-import type Dictionary from "dictionary"
-import dictionary from "dictionary"
+import type {Dictionary} from 'dictionary'
+import dictionary from 'dictionary'
 
 
 const ages:Dictionary<number> = dictionary({
   Tom: 32,
   Jane: 28
 })
-ages.Kate = "two"
+ages.Kate = 'two'
 
 // flow check
 //
 // src/index.js:10
-// 10: ages.Kate = "two"
+// 10: ages.Kate = 'two'
 //                 ^^^^^ string. This type is incompatible with
 // 6:  const ages:Dictionary<number> = dictionary({
 //                           ^^^^^^ number
