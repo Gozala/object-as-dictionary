@@ -1,6 +1,6 @@
 {
   "name": "object-as-dictionary",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "utility for creating dictionary objects",
   "keywords": [
     "flow",
